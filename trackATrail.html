@@ -31,13 +31,17 @@
       <textarea id="review" name="review" rows="3" cols="30" placeholder="My favourite part of the trail was..."></textarea>
 
       <h3>Completion Time</h3>
-      <!--dropdown menus for hours and minutes so user can enter how long they took to hike the trail-->
+      <label for="startTime">Choose the time you started:</label>
+      <input type="time" id="startTime" name="startTime"/>
+      <label for="finishTime">Choose the time you finished:</label>
+      <input type="time" id="finishTime" name="finishTime"/>
 
       <h3>Date</h3>
-      <!--dropdown menu to select date trail was hiked-->
+      <label for="hikeDate">Enter the date of your hike:</label>
+      <input type="date" id="hikeDate" name="hikeDate"/>
 
       <h3>Weather</h3>
-      <!--text box to enter weather-->
+      <label for="weather">What was the weather:<input id="weather" name="weather" type="text"/></label>
 
       <h3>Hiking Partners</h3>
       <label for="hikingPartners">List your hiking partners: <input id="hikingPartners" name="hikingPartners" type="text"/></label>
