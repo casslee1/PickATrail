@@ -35,6 +35,16 @@
 
       <h3>Trail Length</h3>
       <!--slider for selection trail length-->
+      <div class="slider">
+        <input
+          type="range"
+          min="5"
+          max="21"
+          value="10"
+          oninput="rangeValue.innerText = this.value"
+        />
+        <p id="rangeValue">10</p>
+      </div>
 
       <h3>Trail Difficulty</h3>
       <fieldset>
@@ -87,10 +97,11 @@
       <h3>Distance to Trailhead</h3>
       <!--calculate distance from address provided by user to trailhead-->
 
-      <h3>Suggestions</h3>
+      <h3>Suggested Trails</h3>
       <!--display list of suggested trails-->
     </div>
 
+    <div></div>
     <footer></footer>
 
     <script src="index.js"></script>
