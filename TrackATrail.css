@@ -1,8 +1,23 @@
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
 body {
     background-image: url("theNarrows.jpg");
    }
 
-div {
-    background-color: white;
-    opacity: .9;
+#recordTrails{
+  width: 45%;
+  padding: 1rem;
+  background-color: white;
+  opacity: .9;
+}
+
+#trailDiary{
+  width: 45%;
+  padding: 1rem;
+  background-color: white;
+  opacity: .9;
 }
