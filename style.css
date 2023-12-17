@@ -8,7 +8,14 @@ body {
     background-image: url("bergsOnTheTrail.jpg");
    }
 
-/*div {
+   #about{
+    padding: 1rem;
     background-color: white;
     opacity: .9;
-}*/
+  }
+
+  #pickTrail{
+    padding: 1rem;
+    background-color: white;
+    opacity: .9;
+  }
