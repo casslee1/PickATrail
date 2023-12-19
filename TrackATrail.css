@@ -14,21 +14,19 @@
 }
 
 body {
-  background-image: url("theNarrows.jpg");
+  background-color: #e9f1fa;
 }
 
 #recordTrails {
   width: 45%;
   padding: 1rem;
   background-color: white;
-  opacity: 0.9;
 }
 
 #trailDiary {
   width: 45%;
   padding: 1rem;
   background-color: white;
-  opacity: 0.9;
 }
 
 h1,
