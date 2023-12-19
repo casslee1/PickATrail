@@ -1,28 +1,51 @@
-.flexContainer {
+body {
+  background-color: #e9f1fa;
+}
+
+#title {
+  max-width: 1200px;
+  background-image: linear-gradient(to right, white, #e9f1fa);
+  margin: auto;
+}
+
+.aboutContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 #about {
   padding: 1rem;
-  background-color: white;
-  opacity: 0.9;
-  width: 45%;
+  width: 44%;
+}
+
+#coverImage {
+  padding: 1rem;
 }
 
 img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
   padding: 5px;
-  width: 400px;
+  width: 350px;
+}
+
+.pickContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
 }
 
 #pickTrail {
   padding: 1rem;
   background-color: white;
-  opacity: 0.9;
 }
 
 h1,
@@ -36,4 +59,13 @@ footer {
 p,
 label {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#usefulLinks {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
 }
