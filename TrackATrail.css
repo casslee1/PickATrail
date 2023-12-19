@@ -1,8 +1,16 @@
+.title {
+  max-width: 1200px;
+  background-image: linear-gradient(to right, white, #e9f1fa);
+  margin: auto;
+}
+
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 body {
