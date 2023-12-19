@@ -1,21 +1,26 @@
 .flexContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+}
 
-body {
-    background-image: url("bergsOnTheTrail.jpg");
-   }
+#about {
+  padding: 1rem;
+  background-color: white;
+  opacity: 0.9;
+  width: 45%;
+}
 
-   #about{
-    padding: 1rem;
-    background-color: white;
-    opacity: .9;
-  }
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+}
 
-  #pickTrail{
-    padding: 1rem;
-    background-color: white;
-    opacity: .9;
-  }
+#pickTrail {
+  padding: 1rem;
+  background-color: white;
+  opacity: 0.9;
+}

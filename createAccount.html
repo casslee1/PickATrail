@@ -14,9 +14,10 @@
     <nav>
       <a href="./index.html">Pick-A-Trail</a>
       <a href="./trackATrail.html">Track-A-Trail</a>
+      <a href="./createAccount.html">Login</a>
     </nav>
 
-    <div id="loginOrAccount">
+    <div>
       <!--login or create account, .php file?-->
       <h3>Create an Account</h3>
       <form>
@@ -36,6 +37,22 @@
               type="password"
               pattern="[a-z0-5]{8,}"
               required
+          /></label>
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <!--login or create account, .php file?-->
+      <h3>Login</h3>
+      <form>
+        <fieldset>
+          <label for="userID"
+            >Enter your name or email:
+            <input id="userID" name="userID" type="text" required
+          /></label>
+          <label for="newPassword"
+            >Enter your password: <input type="password" required
           /></label>
         </fieldset>
       </form>
