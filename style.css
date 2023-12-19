@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  align-content: center;
+  justify-content: center;
 }
 
 #about {
@@ -23,4 +23,17 @@ img {
   padding: 1rem;
   background-color: white;
   opacity: 0.9;
+}
+
+h1,
+h2,
+h3,
+nav,
+footer {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p,
+label {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }

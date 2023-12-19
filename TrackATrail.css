@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 body {
@@ -20,4 +21,16 @@ body {
   padding: 1rem;
   background-color: white;
   opacity: 0.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+nav {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+label {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
