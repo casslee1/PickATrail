@@ -2,7 +2,7 @@ body {
   background-color: #e9f1fa;
 }
 
-#title {
+.title {
   max-width: 1200px;
   background-image: linear-gradient(to right, white, #e9f1fa);
   margin: auto;
