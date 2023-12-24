@@ -13,10 +13,96 @@
   <body>
     <div id="navigationBar">
       <nav>
-        <a href="./index.html">Pick-A-Trail</a>
-        <a href="./trackATrail.html">Track-A-Trail</a>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
         <a href="./createAccount.html">Login</a>
+        <a href="./pickATrail.html">Pick-A-Trail</a>
+        <a href="./trackATrail.html">Track-A-Trail</a>
       </nav>
+    </div>
+
+    <div class="pickContainer">
+      <div id="pickTrail">
+        <h2>Pick your trail here</h2>
+        <hr />
+        <h3>Trail Length</h3>
+        <!--slider for selection trail length, need double slider-->
+        <div class="slider">
+          <input
+            type="range"
+            min="5"
+            max="21"
+            value="10"
+            oninput="rangeValue.innerText = this.value"
+          />
+          <p id="rangeValue">10</p>
+        </div>
+
+        <h3>Trail Difficulty</h3>
+        <fieldset>
+          <legend>Level of Difficulty</legend>
+
+          <label for="easy">
+            <input id="easy" type="radio" name="levelOfDifficulty" checked />
+            Easy</label
+          >
+
+          <label for="easyToModerate">
+            <input id="easyToModerate" type="radio" name="levelOfDifficulty" />
+            Easy to Moderate</label
+          >
+
+          <label for="moderate">
+            <input id="moderate" type="radio" name="levelOfDifficulty" />
+            Moderate</label
+          >
+
+          <label for="moderateToDifficult">
+            <input
+              id="moderateToDifficult"
+              type="radio"
+              name="levelOfDifficulty"
+            />
+            Moderate to Difficult</label
+          >
+
+          <label for="difficult">
+            <input id="difficult" type="radio" name="levelOfDifficulty" />
+            Difficult</label
+          >
+
+          <label for="difficultToStrenuous">
+            <input
+              id="difficultToStrenuous"
+              type="radio"
+              name="levelOfDifficulty"
+            />
+            Difficult to Strenuous</label
+          >
+
+          <label for="strenuous">
+            <input id="strenuous" type="radio" name="levelOfDifficulty" />
+            Strenuous</label
+          >
+        </fieldset>
+
+        <h3>Distance to Trailhead</h3>
+        <!--calculate distance from address provided by user to trailhead-->
+
+        <h3>Suggested Trails</h3>
+        <!--display list of suggested trails-->
+      </div>
+    </div>
+
+    <div id="usefulLinks">
+      <a href="https://weather.gc.ca/forecast/canada/index_e.html?id=NL"
+        >Weather</a
+      >
+
+      <a
+        href="https://nrc.canada.ca/en/research-development/products-services/software-applications/sun-calculator/"
+        >Sunrise/Sunset</a
+      >
     </div>
 
     <footer>
@@ -29,7 +115,7 @@
           src="./Git-Icon-Black.svg"
           style="height: 1.25rem; width: 1.25rem"
       /></a>
-      Last updated December 21, 2023
+      Last updated December 22, 2023
     </footer>
 
     <script src="index.js"></script>
