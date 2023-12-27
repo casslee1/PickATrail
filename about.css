@@ -1,0 +1,15 @@
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#about {
+  padding: 1rem;
+  width: 44%;
+}

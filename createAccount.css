@@ -9,14 +9,6 @@ label {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-html {
-  background: url(./theNarrows.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 #createAccount {
   background-color: white;
   opacity: 90%;

@@ -1,71 +1,57 @@
-body {
-  background-color: #e9f1fa;
-}
-
-.title {
-  max-width: 1200px;
-  background-image: linear-gradient(to right, white, #e9f1fa);
-  margin: auto;
-}
-
-.aboutContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  background-color: white;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 25px;
-}
-
-#about {
-  padding: 1rem;
-  width: 44%;
-}
-
-#coverImage {
-  padding: 1rem;
-}
-
-img {
-  padding: 5px;
-  width: 350px;
-}
-
-.pickContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  background-color: white;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#pickTrail {
-  padding: 1rem;
-  background-color: white;
+html {
+  background: url(./theNarrows.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1,
-h2,
-h3,
 nav,
 footer {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-p,
-label {
-  font-family: Georgia, "Times New Roman", Times, serif;
+nav a {
+  padding-right: 7%;
+  font-size: larger;
+  color: white;
+  text-decoration: none;
 }
 
-#usefulLinks {
+body {
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#navigationBar {
+  width: 100%;
+  padding-top: 5%;
   text-align: center;
-  padding: 1rem;
+}
+
+#getStarted {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 9%;
+  padding-left: 12%;
+}
+
+#getStarted a {
+  color: white;
+  font-size: larger;
+  text-decoration: none;
 }
 
 footer {
   text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+hr {
+  border: 1px solid white;
 }
