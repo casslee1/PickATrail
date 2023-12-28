@@ -1,19 +1,51 @@
+#navigationBar {
+  width: 100%;
+  padding-top: 3%;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+nav a {
+  padding-right: 7%;
+  font-size: larger;
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h3,
+nav,
+footer {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .pickContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  background-color: white;
-  max-width: 1200px;
   margin: auto;
 }
 
+#pageImage {
+  max-width: 45%;
+}
+
+img {
+  max-width: 80%;
+}
+
 #pickTrail {
+  max-width: 45%;
   padding: 1rem;
-  background-color: white;
 }
 
 #usefulLinks {
   text-align: center;
   padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 5%;
 }
