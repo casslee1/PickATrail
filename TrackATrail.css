@@ -1,32 +1,15 @@
-.title {
-  max-width: 1200px;
-  background-image: linear-gradient(to right, white, #e9f1fa);
-  margin: auto;
+#navigationBar {
+  width: 100%;
+  padding-top: 3%;
+  text-align: center;
+  padding-bottom: 3%;
 }
 
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-body {
-  background-color: #e9f1fa;
-}
-
-#recordTrails {
-  width: 45%;
-  padding: 1rem;
-  background-color: white;
-}
-
-#trailDiary {
-  width: 45%;
-  padding: 1rem;
-  background-color: white;
+nav a {
+  padding-right: 7%;
+  font-size: larger;
+  text-decoration: none;
+  color: black;
 }
 
 h1,
@@ -39,4 +22,47 @@ nav {
 
 label {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.topContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.headerImage {
+  max-width: 25%;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#recordTrails {
+  width: 45%;
+  padding: 1rem;
+  margin: auto;
+}
+
+#trailDiary {
+  width: 45%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 5%;
 }
