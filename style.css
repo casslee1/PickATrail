@@ -54,8 +54,8 @@ body {
   text-decoration: none;
 }
 
-#getstarted a:hover {
-  color: blueviolet;
+#getStarted a:hover {
+  color: lightblue;
 }
 
 footer {
