@@ -19,6 +19,14 @@ nav a {
   text-decoration: none;
 }
 
+nav a.active {
+  color: grey;
+}
+
+a:hover {
+  color: blue;
+}
+
 body {
   min-height: 98vh;
   display: flex;

@@ -12,6 +12,14 @@ nav a {
   color: black;
 }
 
+nav a.active {
+  color: grey;
+}
+
+a:hover {
+  color: blue;
+}
+
 h1,
 h2,
 h3,
