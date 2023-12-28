@@ -1,26 +1,46 @@
-h1,
 h2,
-h3,
 nav {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-label {
-  font-family: Georgia, "Times New Roman", Times, serif;
+#navigationBar {
+  width: 100%;
+  padding-top: 3%;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+nav a {
+  padding-right: 7%;
+  font-size: larger;
+  text-decoration: none;
+  color: black;
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+#flexContainer {
+  display: flex;
 }
 
 #createAccount {
-  background-color: white;
-  opacity: 90%;
-  width: 50%;
+  width: 45%;
   margin: auto;
 }
 
 #login {
-  background-color: white;
-  opacity: 90%;
-  width: 50%;
-  margin: auto;
+  width: 45%;
+  margin-inline: auto;
+}
+
+label {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 input,
@@ -28,4 +48,10 @@ textarea {
   margin: 10px 0 0 0;
   width: 100%;
   min-height: 2em;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 5%;
 }
