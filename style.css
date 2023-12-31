@@ -48,14 +48,17 @@ body {
   padding-left: 12%;
 }
 
-#getStarted a {
-  color: white;
-  font-size: larger;
-  text-decoration: none;
+.button {
+  background-color: white;
+  color: grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  border: none;
+  border-radius: 8px;
 }
 
-#getStarted a:hover {
-  color: lightblue;
+.button:hover {
+  opacity: 0.8;
 }
 
 footer {

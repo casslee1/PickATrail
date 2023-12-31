@@ -1,3 +1,8 @@
+//Get Started button on home page
+function getStarted() {
+  window.location.href = "./pickATrail.html";
+}
+
 //Trail names and attributes
 let trails = [
     { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult"},
