@@ -28,8 +28,32 @@
         <hr />
         <h1>Pick your trail here</h1>
         <hr />
+
+        Difficulty:
+        <input type="radio" name="difficulty" value="Easy" id="easy" />Easy
+        <input
+          type="radio"
+          name="difficulty"
+          value="Moderate"
+          id="moderate"
+        />Moderate
+        <input
+          type="radio"
+          name="difficulty"
+          value="Difficult"
+          id="difficult"
+        />Difficult
+
+        <br />
+
+        <button type="button" onclick="displayDifficultyValue()">Submit</button>
+
+        <br />
+
+        <p id="difficultyResult"></p>
+
+        <!--  
         <h3>Trail Length</h3>
-        <!--slider for selection trail length, need double slider-->
         <div class="slider">
           <input
             type="range"
@@ -90,7 +114,7 @@
         </fieldset>
 
         <h3>Distance to Trailhead</h3>
-        <!--calculate distance from address provided by user to trailhead-->
+      -->
 
         <h3>Suggested Trails</h3>
         <!--display list of suggested trails-->

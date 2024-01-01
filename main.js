@@ -3,6 +3,20 @@ function getStarted() {
   window.location.href = "./pickATrail.html";
 }
 
+//Select trails by difficulty
+function displayDifficultyValue() {    
+  var getSelectedValue = document.querySelector(   
+      'input[name="difficulty"]:checked'); 
+      
+      if(getSelectedValue != null) {   
+      document.getElementById("difficultyResult").innerHTML = getSelectedValue.value  + " difficulty is selected";  
+      }
+      
+      else {   
+              document.getElementById("difficultyResult").innerHTML = "*You have not selected any difficulty";
+            }
+} 
+
 //Trail names and attributes
 let trails = [
     { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult"},
