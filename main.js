@@ -8,11 +8,16 @@ function trailByDifficultyValue() {
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
   
+    let newArr=[];
+
       trails.forEach(({trailName, difficulty}) => {
         if(difficulty == getSelectedValue.value){
-          document.getElementById("difficultyResult").innerHTML = trailName;
+          newArr.push(trailName);
         }
       });
+
+      document.getElementById("difficultyResult").innerHTML = newArr;
+
 } 
 
 //Trail names and attributes
