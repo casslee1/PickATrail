@@ -20,6 +20,31 @@ function trailByDifficultyValue() {
 
 } 
 
+//Select trails by length
+let slider = document.getElementById("myRange");
+let output = document.getElementById("selectedRange");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+function trailByLength() {
+ 
+  let lengthArr=[];
+
+  trails.forEach(({trailName, lengthInKm}) => {
+    if(lengthInKm <= slider.value){
+      lengthArr.push(trailName);
+    }
+  });
+
+  document.getElementById("lengthResult").innerHTML = lengthArr;
+
+
+}
+
 //Trail names and attributes
 let trails = [
     { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult"},
