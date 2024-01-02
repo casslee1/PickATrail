@@ -4,17 +4,15 @@ function getStarted() {
 }
 
 //Select trails by difficulty
-function displayDifficultyValue() {    
-  var getSelectedValue = document.querySelector(   
-      'input[name="difficulty"]:checked'); 
-      
-      if(getSelectedValue != null) {   
-      document.getElementById("difficultyResult").innerHTML = getSelectedValue.value  + " difficulty is selected";  
-      }
-      
-      else {   
-              document.getElementById("difficultyResult").innerHTML = "*You have not selected any difficulty";
-            }
+function trailByDifficultyValue() {    
+  let getSelectedValue = document.querySelector(   
+      'input[name="difficultyRadio"]:checked'); 
+  
+      trails.forEach(({trailName, difficulty}) => {
+        if(difficulty == getSelectedValue.value){
+          document.getElementById("difficultyResult").innerHTML = trailName;
+        }
+      });
 } 
 
 //Trail names and attributes

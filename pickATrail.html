@@ -30,27 +30,25 @@
         <hr />
 
         Difficulty:
-        <input type="radio" name="difficulty" value="Easy" id="easy" />Easy
+        <input type="radio" name="difficultyRadio" value="Easy" id="Easy" />Easy
         <input
           type="radio"
-          name="difficulty"
+          name="difficultyRadio"
           value="Moderate"
-          id="moderate"
+          id="Moderate"
         />Moderate
         <input
           type="radio"
-          name="difficulty"
+          name="difficultyRadio"
           value="Difficult"
-          id="difficult"
+          id="Difficult"
         />Difficult
 
         <br />
 
-        <button type="button" onclick="displayDifficultyValue()">Submit</button>
+        <button type="button" onclick="trailByDifficultyValue()">Submit</button>
 
         <br />
-
-        <p id="difficultyResult"></p>
 
         <!--  
         <h3>Trail Length</h3>
@@ -118,6 +116,8 @@
 
         <h3>Suggested Trails</h3>
         <!--display list of suggested trails-->
+
+        <p id="difficultyResult"></p>
       </div>
 
       <div id="pageImage">
