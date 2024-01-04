@@ -34,6 +34,31 @@ footer {
   margin: auto;
 }
 
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 2em;
+  background: lightgrey;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  background: rgb(47, 91, 185);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 2em;
+  height: 2em;
+  background: rgb(47, 91, 185);
+  cursor: pointer;
+}
+
 #pageImage {
   max-width: 45%;
 }

@@ -16,7 +16,15 @@ function trailByDifficultyValue() {
         }
       });
 
-      document.getElementById("difficultyResult").innerHTML = newArr;
+      let text = "<ul>";
+      newArr.forEach(myFunction);
+      text += "</ul>";
+      
+      document.getElementById("difficultyResult").innerHTML = text;
+
+      function myFunction(value) {
+        text += "<li>" + value + "</li>";
+      }
 
 } 
 
@@ -40,8 +48,15 @@ function trailByLength() {
     }
   });
 
-  document.getElementById("lengthResult").innerHTML = lengthArr;
+  let text = "<ul>";
+  lengthArr.forEach(myFunction);
+  text += "</ul>";
+  
+  document.getElementById("lengthResult").innerHTML = text;
 
+  function myFunction(value) {
+    text += "<li>" + value + "</li>";
+  }
 
 }
 
