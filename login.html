@@ -7,7 +7,7 @@
     <meta name="description" content="TBD" />
     <meta name="author" content="Cassandra Lee" />
     <title>Pick A Trail</title>
-    <link rel="stylesheet" href="./createAccount.css" />
+    <link rel="stylesheet" href="./login.css" />
   </head>
 
   <body>
@@ -16,7 +16,7 @@
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
-        <a href="./login.html" class="active">Login</a>
+        <a href="./createAccount.html" class="active">Login</a>
         <a href="./pickATrail.html">Pick-A-Trail</a>
         <a href="./trackATrail.html">Track-A-Trail</a>
       </nav>
@@ -31,29 +31,31 @@
     </div>
 
     <div id="flexContainer">
-      <div id="createAccount">
+      <div id="login">
         <!--login or create account, .php file?-->
-        <h2>Create an Account</h2>
+        <h2>Login</h2>
+
         <form>
           <fieldset>
-            <label for="name"
-              >Enter your name:
-              <input id="name" name="name" type="text" required
-            /></label>
-            <label for="email"
-              >Enter your email:
-              <input id="email" name="email" type="email" required
+            <label for="userID"
+              >Enter your name or email:
+              <input id="userID" name="userID" type="text" required
             /></label>
             <label for="newPassword"
-              >Create a password:
-              <input
-                id="newPassword"
-                name="newPassword"
-                type="password"
-                pattern="[a-z0-5]{8,}"
-                required
+              >Enter your password: <input type="password" required
             /></label>
           </fieldset>
+        </form>
+      </div>
+
+      <div id="createAccount">
+        <form>
+          <input
+            type="button"
+            value="Create Account"
+            onclick="createAccount();"
+            class="button"
+          />
         </form>
       </div>
     </div>
