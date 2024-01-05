@@ -3,6 +3,12 @@ function getStarted() {
   window.location.href = "./pickATrail.html";
 }
 
+//Create Account button on login page
+//Get Started button on home page
+function createAccount() {
+  window.location.href = "./createAccount.html";
+}
+
 //Select trails by difficulty
 function trailByDifficultyValue() {    
   let getSelectedValue = document.querySelector(   
