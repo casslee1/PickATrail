@@ -44,6 +44,9 @@ img {
 #about {
   grid-row: 1 / 4;
   padding-right: 5%;
+  padding-left: 5%;
+  background-color: #e9f4fd;
+  margin-right: 2%;
 }
 
 footer {

@@ -54,12 +54,14 @@ img {
   gap: 10px;
   max-width: 1200px;
   margin: auto;
+  background-color: #e9f4fd;
 }
 
 #recordTrails {
   width: 45%;
   padding: 1rem;
   margin: auto;
+  background-color: #e9f4fd;
 }
 
 #trailDiary {
@@ -67,6 +69,7 @@ img {
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
+  background-color: #e9f4fd;
 }
 
 footer {
