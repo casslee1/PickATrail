@@ -1,3 +1,24 @@
+//Navigation bar
+function goHome() {
+  window.location.href = "./index.html";
+}
+
+function goToAbout() {
+  window.location.href = "./about.html";
+}
+
+function goToPick() {
+  window.location.href = "./pickATrail.html";
+}
+
+function goToTrack() {
+  window.location.href = "./trackATrail.html";
+}
+
+function goToLogin() {
+  window.location.href = "./login.html";
+}
+
 //Get Started button on home page
 function getStarted() {
   window.location.href = "./pickATrail.html";
