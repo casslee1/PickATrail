@@ -1,23 +1,17 @@
 #navigationBar {
   width: 100%;
-  padding-top: 3%;
+  background-color: RGBA(192, 179, 177, 0.5);
+  margin: 0;
+  padding: 0.3%;
   text-align: center;
-  padding-bottom: 3%;
 }
 
-nav a {
-  padding-right: 7%;
-  font-size: larger;
-  text-decoration: none;
-  color: black;
-}
-
-nav a.active {
-  color: grey;
-}
-
-a:hover {
-  color: blue;
+.navButton {
+  color: white;
+  background: 0;
+  border: 0;
+  font-size: 1em;
+  padding-left: 2em;
 }
 
 h1,
