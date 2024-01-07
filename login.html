@@ -12,15 +12,42 @@
 
   <body>
     <div id="navigationBar">
-      <hr />
-      <nav>
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./createAccount.html" class="active">Login</a>
-        <a href="./pickATrail.html">Pick-A-Trail</a>
-        <a href="./trackATrail.html">Track-A-Trail</a>
-      </nav>
-      <hr />
+      <form>
+        <input
+          type="button"
+          value="Home"
+          onclick="goHome();"
+          class="navButton"
+        />
+
+        <input
+          type="button"
+          value="About"
+          onclick="goToAbout();"
+          class="navButton"
+        />
+
+        <input
+          type="button"
+          value="Pick A Trail"
+          onclick="goToPick();"
+          class="navButton"
+        />
+
+        <input
+          type="button"
+          value="Track A Trail"
+          onclick="goToTrack();"
+          class="navButton"
+        />
+
+        <input
+          type="button"
+          value="Login"
+          onclick="goToLogin();"
+          class="navButton"
+        />
+      </form>
     </div>
 
     <div class="imageContainer">
