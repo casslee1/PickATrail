@@ -1,4 +1,13 @@
 //Navigation bar
+function hamburgerNav() {
+  let x = document.getElementById("navigationBar");
+  if (x.className === "navigationBar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navigationBar";
+  }
+}
+
 function goHome() {
   window.location.href = "./index.html";
 }
