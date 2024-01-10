@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <div id="navigationBar">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div class="navigationBar" id="navigationBar">
       <form>
         <input
           type="button"
@@ -46,32 +50,28 @@
           value="Login"
           onclick="goToLogin();"
           class="navButton"
+          id="currentPage"
         />
       </form>
-    </div>
 
-    <div class="imageContainer">
-      <img
-        src="./images/anotherBerg3.jpg"
-        alt="View of an iceberg from the East Coast Trail"
-      />
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
     <div id="flexContainer">
       <div id="login">
         <!--login or create account, .php file?-->
         <h2>Login</h2>
-
         <form>
-          <fieldset>
-            <label for="userID"
-              >Enter your name or email:
-              <input id="userID" name="userID" type="text" required
-            /></label>
-            <label for="newPassword"
-              >Enter your password: <input type="password" required
-            /></label>
-          </fieldset>
+          <label for="userID"
+            >Enter your name or email:<br />
+            <input id="userID" name="userID" type="text" required
+          /></label>
+          <br />
+          <label for="newPassword"
+            >Enter your password: <br /><input type="password" required
+          /></label>
         </form>
       </div>
 
@@ -79,7 +79,7 @@
         <form>
           <input
             type="button"
-            value="Create Account"
+            value="CREATE ACCOUNT"
             onclick="createAccount();"
             class="button"
           />
