@@ -39,31 +39,6 @@ function createAccount() {
   window.location.href = "./createAccount.html";
 }
 
-//Select trails by difficulty
-function trailByDifficultyValue() {    
-  let getSelectedValue = document.querySelector(   
-      'input[name="difficultyRadio"]:checked'); 
-  
-    let newArr=[];
-
-      trails.forEach(({trailName, difficulty}) => {
-        if(difficulty == getSelectedValue.value){
-          newArr.push(trailName);
-        }
-      });
-
-      let text = "<ul>";
-      newArr.forEach(myFunction);
-      text += "</ul>";
-      
-      document.getElementById("difficultyResult").innerHTML = text;
-
-      function myFunction(value) {
-        text += "<li>" + value + "</li>";
-      }
-
-} 
-
 //Select trails by length
 let slider = document.getElementById("myRange");
 let output = document.getElementById("selectedRange");
@@ -94,7 +69,90 @@ function trailByLength() {
     text += "<li>" + value + "</li>";
   }
 
+  let trailDifficultyArr=[];
+  trails.forEach(({difficulty, lengthInKm}) => {
+    if(lengthInKm <= slider.value){
+      trailDifficultyArr.push(difficulty);
+    }
+  });
+
+  if (trailDifficultyArr.includes("Easy")){
+    document.getElementById("Easy").disabled = false;
+  }
+  else {
+    document.getElementById("Easy").disabled = true;
+  }
+
+  if (trailDifficultyArr.includes("Easy to Moderate")){
+    document.getElementById("Easy to Moderate").disabled = false;
+  }
+  else {
+    document.getElementById("Easy to Moderate").disabled = true;
+  }
+
+  if (trailDifficultyArr.includes("Moderate")){
+    document.getElementById("Moderate").disabled = false;
+  }
+  else {
+    document.getElementById("Moderate").disabled = true;
+  }
+  
+  if (trailDifficultyArr.includes("Moderate to Difficult")){
+    document.getElementById("Moderate to Difficult").disabled = false;
+  }
+  else {
+    document.getElementById("Moderate to Difficult").disabled = true;
+  }
+
+  if (trailDifficultyArr.includes("Difficult")){
+    document.getElementById("Difficult").disabled = false;
+  }
+  else {
+    document.getElementById("Difficult").disabled = true;
+  }
+
+  if (trailDifficultyArr.includes("Difficult to Strenuous")){
+    document.getElementById("Difficult to Strenuous").disabled = false;
+  }
+  else {
+    document.getElementById("Difficult to Strenuous").disabled = true;
+  }
+
+  if (trailDifficultyArr.includes("Strenuous")){
+    document.getElementById("Strenuous").disabled = false;
+  }
+  else {
+    document.getElementById("Strenuous").disabled = true;
+  }
+
 }
+
+//Select trails by difficulty
+function trailByDifficultyValue() {    
+  let getSelectedValue = document.querySelector(   
+      'input[name="difficultyRadio"]:checked'); 
+  
+    let newArr=[];
+
+      trails.forEach(({trailName, difficulty}) => {
+        if(difficulty == getSelectedValue.value){
+          newArr.push(trailName);
+        }
+      });
+
+      let text = "<ul>";
+      newArr.forEach(myFunction);
+      text += "</ul>";
+      
+      document.getElementById("difficultyResult").innerHTML = text;
+
+      function myFunction(value) {
+        text += "<li>" + value + "</li>";
+      }
+
+} 
+
+
 
 //Trail names and attributes
 let trails = [

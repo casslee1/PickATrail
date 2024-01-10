@@ -57,6 +57,25 @@
         <hr />
 
         <fieldset>
+          <h3>Trail Length</h3>
+
+          <input
+            type="range"
+            min="3"
+            max="21"
+            value="10"
+            class="slider"
+            id="myRange"
+          />
+          <p>Up to: <span id="selectedRange"></span>km</p>
+          <br />
+
+          <button type="button" onclick="trailByLength()">Submit</button>
+          <br />
+          <p id="lengthResult"></p>
+        </fieldset>
+
+        <fieldset>
           Difficulty:
           <input
             type="radio"
@@ -109,25 +128,6 @@
 
           <br />
           <p id="difficultyResult"></p>
-        </fieldset>
-
-        <fieldset>
-          <h3>Trail Length</h3>
-
-          <input
-            type="range"
-            min="0"
-            max="21"
-            value="10"
-            class="slider"
-            id="myRange"
-          />
-          <p>Up to: <span id="selectedRange"></span>km</p>
-          <br />
-
-          <button type="button" onclick="trailByLength()">Submit</button>
-          <br />
-          <p id="lengthResult"></p>
         </fieldset>
         <!--
         <h3>Trail Difficulty</h3>
