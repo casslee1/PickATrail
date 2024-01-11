@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <div id="navigationBar">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <div class="navigationBar" id="navigationBar">
       <form>
         <input
           type="button"
@@ -39,6 +43,7 @@
           value="Track A Trail"
           onclick="goToTrack();"
           class="navButton"
+          id="currentPage"
         />
 
         <input
@@ -48,21 +53,18 @@
           class="navButton"
         />
       </form>
-    </div>
 
-  <div class="topContainer">
-    <div class="headerImage"><img src="./images/signForTrail2.jpg" alt="Wooden sign marked trail indicating the direction of the trail"></div>
-    <div class="headerImage"><img src="./images/grassAndTrees2.jpg" alt="Grassy field with evergreen trees beside ocean"></div>
-    <div class="headerImage"><img src="./images/woodTrail2.jpg" alt="Wooden trail"></div>
-    <div class="headerImage"><img src="./images/gravelTrail2.jpg" alt="Trail on side of hill beside ocean"></div>
-  </div>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+    </div>
 
     <div class="flexContainer">
 
     <div id="recordTrails">
       <!--enter information for completed trails-->
       <h2>Record Your Hike Here!</h2>  
-      <hr/>
       <!--Add description/instructions-->  
 
       <h3>Trail Name</h3>
@@ -94,7 +96,6 @@
 
     <div id="trailDiary">
       <h2>Trail Diary</h2>
-      <hr/>
       <div>
         <h3>Stats</h3>
         <!--include: number of trails hiked, number of hikes total, # and % of trails hiked, % of overall ECT completed-->
