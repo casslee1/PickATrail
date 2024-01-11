@@ -80,27 +80,29 @@ label {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  max-width: 1200px;
+  max-width: 600px;
   margin: auto;
   margin-top: 3%;
   background-color: RGBA(192, 179, 177, 0.9);
+  border-radius: 8px;
 }
 
 #recordTrails {
-  width: 45%;
+  max-width: 600px;
   padding: 1rem;
   margin: auto;
 }
 
-#trailDiary {
+/*#trailDiary {
   width: 45%;
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 footer {
   text-align: center;
   width: 100%;
   padding: 5%;
+  color: white;
 }
