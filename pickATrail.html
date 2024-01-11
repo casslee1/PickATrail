@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <div id="navigationBar">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div class="navigationBar" , id="navigationBar">
       <form>
         <input
           type="button"
@@ -49,85 +53,86 @@
           class="navButton"
         />
       </form>
+
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
     <div class="pickContainer">
       <div id="pickTrail">
         <h1>Pick your trail here</h1>
 
-        <fieldset>
-          <h3>Trail Length</h3>
+        <h3>Trail Length</h3>
 
-          <input
-            type="range"
-            min="3"
-            max="21"
-            value="10"
-            class="slider"
-            id="myRange"
-          />
-          <p>Up to: <span id="selectedRange"></span>km</p>
-          <br />
+        <input
+          type="range"
+          min="3"
+          max="21"
+          value="10"
+          class="slider"
+          id="myRange"
+        />
+        <p>Up to: <span id="selectedRange"></span>km</p>
 
-          <button type="button" onclick="trailByLength()">Submit</button>
-          <br />
-          <p id="lengthResult"></p>
-        </fieldset>
+        <button type="button" class="submitButton" onclick="trailByLength()">
+          Submit
+        </button>
+        <br />
+        <p id="lengthResult"></p>
 
-        <fieldset>
-          Difficulty:
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Easy"
-            id="Easy"
-          />Easy
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Easy to Moderate"
-            id="Easy to Moderate"
-          />Easy to Moderate
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Moderate"
-            id="Moderate"
-          />Moderate
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Moderate to Difficult"
-            id="Moderate to Difficult"
-          />Moderate to Difficult
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Difficult"
-            id="Difficult"
-          />Difficult
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Difficult to Strenuous"
-            id="Difficult to Strenuous"
-          />Difficult to Strenuous
-          <input
-            type="radio"
-            name="difficultyRadio"
-            value="Strenuous"
-            id="Strenuous"
-          />Strenuous
+        <h3>Difficulty:</h3>
+        <input type="radio" name="difficultyRadio" value="Easy" id="Easy" />Easy
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Easy to Moderate"
+          id="Easy to Moderate"
+        />Easy to Moderate
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Moderate"
+          id="Moderate"
+        />Moderate
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Moderate to Difficult"
+          id="Moderate to Difficult"
+        />Moderate to Difficult
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Difficult"
+          id="Difficult"
+        />Difficult
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Difficult to Strenuous"
+          id="Difficult to Strenuous"
+        />Difficult to Strenuous
+        <input
+          type="radio"
+          name="difficultyRadio"
+          value="Strenuous"
+          id="Strenuous"
+        />Strenuous
 
-          <br />
+        <br />
 
-          <button type="button" onclick="trailByDifficultyValue()">
-            Submit
-          </button>
+        <button
+          type="button"
+          class="submitButton"
+          onclick="trailByDifficultyValue()"
+        >
+          Submit
+        </button>
 
-          <br />
-          <p id="difficultyResult"></p>
-        </fieldset>
+        <br />
+        <p id="difficultyResult"></p>
+
         <!--
         <h3>Trail Difficulty</h3>
         <fieldset>

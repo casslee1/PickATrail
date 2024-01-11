@@ -77,9 +77,7 @@ label {
 
 .pickContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
 }
 
 .slider {
@@ -108,12 +106,19 @@ label {
   cursor: pointer;
 }
 
+.submitButton {
+  color: white;
+  font-size: 1em;
+}
+
 #pickTrail {
   max-width: 45%;
   padding: 1rem;
   background-color: #e9f4fd;
   margin-top: 3%;
   background-color: RGBA(192, 179, 177, 0.9);
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #usefulLinks {
@@ -125,4 +130,9 @@ footer {
   text-align: center;
   width: 100%;
   padding: 5%;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
