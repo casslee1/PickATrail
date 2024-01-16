@@ -1,5 +1,5 @@
 html {
-  background-image: url(images/theNarrows.jpg) no-repeat center center fixed;
+  background: url(/images/homePage.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,21 +32,24 @@ body {
 
 #navigationBar {
   width: 100%;
-  background-color: RGBA(192, 179, 177, 0.5);
+  background-color: #565836;
   margin: 0;
   padding: 0.3%;
   text-align: center;
+  display: flex;
 }
 
-.navButton {
-  color: white;
+.navButton,
+.lastNavButton {
+  color: #fae4bb;
   background: 0;
   border: 0;
   font-size: 1em;
   padding-left: 2em;
 }
 
-.navButton:hover {
+.navButton:hover,
+.lastNavButton:hover {
   opacity: 0.7;
 }
 
@@ -89,14 +92,14 @@ body {
 #getStarted {
   width: 100%;
   text-align: center;
-  margin-top: 22%;
+  margin-top: 5%;
 }
 
 .button {
-  background-color: RGBA(192, 179, 177, 0.8);
-  color: white;
+  background-color: #565836;
+  color: #fae4bb;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.4em;
   border: none;
   border-radius: 8px;
 }
