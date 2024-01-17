@@ -1,5 +1,6 @@
 html {
-  background: url(./images/gravelTrail.jpg) no-repeat center center fixed;
+  background: url(/images/trailDiaryBackground.png) no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,14 +13,14 @@ body {
 
 #navigationBar {
   width: 100%;
-  background-color: RGBA(192, 179, 177, 0.5);
+  background-color: #565836;
   margin: 0;
   padding: 0.3%;
   text-align: center;
 }
 
 .navButton {
-  color: white;
+  color: #fae4bb;
   background: 0;
   border: 0;
   font-size: 1em;
@@ -28,6 +29,7 @@ body {
 
 .navButton:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 #currentPage {
@@ -45,7 +47,7 @@ body {
   .navigationBar a.icon {
     float: right;
     display: block;
-    color: white;
+    color: #fae4bb;
     padding-right: 2%;
   }
 }
@@ -72,7 +74,7 @@ h3,
 h4,
 label {
   font-family: Helvetica, Arial, sans-serif;
-  color: white;
+  color: #fae4bb;
 }
 
 .flexContainer {
@@ -83,7 +85,7 @@ label {
   max-width: 600px;
   margin: auto;
   margin-top: 3%;
-  background-color: RGBA(192, 179, 177, 0.9);
+  background-color: #565836;
   border-radius: 8px;
 }
 
@@ -104,5 +106,5 @@ footer {
   text-align: center;
   width: 100%;
   padding: 5%;
-  color: white;
+  color: #fae4bb;
 }

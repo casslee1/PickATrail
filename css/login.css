@@ -1,5 +1,5 @@
 html {
-  background: url(./images/anotherBerg4.jpg) no-repeat center center fixed;
+  background: url(/images/loginBackground.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,19 +12,19 @@ body {
 
 h2 {
   font-family: Helvetica, Arial, sans-serif;
-  color: white;
+  color: #fae4bb;
 }
 
 #navigationBar {
   width: 100%;
-  background-color: RGBA(192, 179, 177, 0.5);
+  background-color: #565836;
   margin: 0;
   padding: 0.3%;
   text-align: center;
 }
 
 .navButton {
-  color: white;
+  color: #fae4bb;
   background: 0;
   border: 0;
   font-size: 1em;
@@ -33,6 +33,7 @@ h2 {
 
 .navButton:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 #currentPage {
@@ -50,7 +51,7 @@ h2 {
   .navigationBar a.icon {
     float: right;
     display: block;
-    color: white;
+    color: #fae4bb;
     padding-right: 2%;
   }
 }
@@ -80,7 +81,7 @@ h2 {
 #login {
   max-width: 475px;
   margin-inline: auto;
-  background-color: RGBA(192, 179, 177, 0.85);
+  background-color: #565836;
   text-align: center;
   padding-top: 0;
   padding-left: 3em;
@@ -97,8 +98,8 @@ h2 {
 }
 
 .button {
-  background-color: RGBA(192, 179, 177, 0.8);
-  color: white;
+  background-color: #565836;
+  color: #fae4bb;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   border: none;
@@ -107,11 +108,12 @@ h2 {
 
 .button:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 label {
   font-family: Helvetica, Arial, sans-serif;
-  color: white;
+  color: #fae4bb;
   display: block;
 }
 

@@ -6,23 +6,6 @@ html {
   background-size: cover;
 }
 
-h1 {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-size: 3.5em;
-  margin: 0;
-}
-
-p {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-footer {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 body {
   min-height: 95vh;
   display: flex;
@@ -51,6 +34,7 @@ body {
 .navButton:hover,
 .lastNavButton:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 #currentPage {
@@ -68,7 +52,7 @@ body {
   .navigationBar a.icon {
     float: right;
     display: block;
-    color: white;
+    color: #fae4bb;
     padding-right: 2%;
   }
 }
@@ -106,11 +90,14 @@ body {
 
 .button:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
   width: 100%;
   margin-top: auto;
-  color: white;
+  color: #fae4bb;
+  font-family: Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 4px #565836;
 }
