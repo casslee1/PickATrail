@@ -19,11 +19,9 @@ body {
   margin: 0;
   padding: 0.3%;
   text-align: center;
-  display: flex;
 }
 
-.navButton,
-.lastNavButton {
+.navButton {
   color: #fae4bb;
   background: 0;
   border: 0;
@@ -31,8 +29,7 @@ body {
   padding-left: 2em;
 }
 
-.navButton:hover,
-.lastNavButton:hover {
+.navButton:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -73,10 +70,19 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #getStarted {
+    padding-top: 16%;
+  }
+}
+
 #getStarted {
-  width: 100%;
   text-align: center;
   margin-top: 5%;
+}
+
+img {
+  max-width: 90%;
 }
 
 .button {
@@ -95,7 +101,6 @@ body {
 
 footer {
   text-align: center;
-  width: 100%;
   margin-top: auto;
   color: #fae4bb;
   font-family: Helvetica, Arial, sans-serif;
