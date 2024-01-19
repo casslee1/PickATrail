@@ -1,5 +1,5 @@
 html {
-  background: url(/images/pickBackground.png) no-repeat center center fixed;
+  background: url("../images/pickBackground.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,6 +64,9 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -80,6 +83,8 @@ label {
   display: flex;
   justify-content: center;
   border-radius: 8px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .slider {
@@ -142,6 +147,5 @@ label {
 
 footer {
   text-align: center;
-  width: 100%;
-  padding: 5%;
+  margin: auto;
 }

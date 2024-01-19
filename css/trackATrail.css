@@ -1,5 +1,5 @@
 html {
-  background: url(/images/trailDiaryBackground.png) no-repeat center center
+  background: url("../images/trailDiaryBackground.png") no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8,6 +8,9 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -90,7 +93,6 @@ label {
 }
 
 #recordTrails {
-  max-width: 600px;
   padding: 1rem;
   margin: auto;
 }
