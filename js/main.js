@@ -46,29 +46,8 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-}
 
-
-function trailByLength() {
- 
-  let lengthArr=[];
-
-  trails.forEach(({trailName, lengthInKm}) => {
-    if(lengthInKm <= slider.value){
-      lengthArr.push(trailName);
-    }
-  });
-
-  let text = "<ul>";
-  lengthArr.forEach(myFunction);
-  text += "</ul>";
-  
-  document.getElementById("lengthResult").innerHTML = text;
-
-  function myFunction(value) {
-    text += "<li>" + value + "</li>";
-  }
-
+  //change availability of Difficulty radio buttons based on trail length
   let trailDifficultyArr=[];
   trails.forEach(({difficulty, lengthInKm}) => {
     if(lengthInKm <= slider.value){
@@ -123,6 +102,29 @@ function trailByLength() {
   }
   else {
     document.getElementById("Strenuous").disabled = true;
+  }
+
+}
+
+
+function trailByLength() {
+ 
+  let lengthArr=[];
+
+  trails.forEach(({trailName, lengthInKm}) => {
+    if(lengthInKm <= slider.value){
+      lengthArr.push(trailName);
+    }
+  });
+
+  let text = "<ul>";
+  lengthArr.forEach(myFunction);
+  text += "</ul>"; 
+  
+  document.getElementById("lengthResult").innerHTML = text;
+
+  function myFunction(value) {
+    text += "<li>" + value + "</li>";
   }
 
 }
