@@ -34,12 +34,11 @@ function getStarted() {
 }
 
 //Create Account button on login page
-//Get Started button on home page
 function createAccount() {
   window.location.href = "./createAccount.html";
 }
 
-//Select trails by length
+//Slider to select trails by length
 let slider = document.getElementById("myRange");
 let output = document.getElementById("selectedRange");
 output.innerHTML = slider.value;
@@ -47,7 +46,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 
-  //change availability of Difficulty radio buttons based on trail length
+  //Change availability of Difficulty radio buttons based on trail length slider
   let trailDifficultyArr=[];
   trails.forEach(({difficulty, lengthInKm}) => {
     if(lengthInKm <= slider.value){
@@ -107,7 +106,7 @@ slider.oninput = function() {
 }
 
 
-function trailByLength() {
+/*function trailByLength() {
  
   let lengthArr=[];
 
@@ -127,17 +126,17 @@ function trailByLength() {
     text += "<li>" + value + "</li>";
   }
 
-}
+}*/
 
 //Select trails by difficulty
-function trailByDifficultyValue() {    
+function trailSuggestions() {    
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
   
     let newArr=[];
 
-      trails.forEach(({trailName, difficulty}) => {
-        if(difficulty == getSelectedValue.value){
+      trails.forEach(({trailName, difficulty, lengthInKm}) => {
+        if(difficulty == getSelectedValue.value && lengthInKm <= slider.value){
           newArr.push(trailName);
         }
       });
