@@ -79,6 +79,10 @@ label {
   color: #fae4bb;
 }
 
+h1 {
+  text-align: center;
+}
+
 .pickContainer {
   display: flex;
   justify-content: center;

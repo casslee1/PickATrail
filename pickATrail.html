@@ -61,9 +61,9 @@
 
     <div class="pickContainer">
       <div id="pickTrail">
-        <h1>Choose your path here</h1>
+        <h1>Choose Your Path Here</h1>
 
-        <h3>Trail Length</h3>
+        <h3>1) Select your maximum trail length:</h3>
 
         <input
           type="range"
@@ -73,7 +73,7 @@
           class="slider"
           id="myRange"
         />
-        <p>Up to: <span id="selectedRange"></span>km</p>
+        <p><span id="selectedRange"></span>km</p>
 
         <!--<button type="button" class="submitButton" onclick="trailByLength()">
           Submit
@@ -81,7 +81,7 @@
         <br />
         <p id="lengthResult"></p>-->
 
-        <h3>Difficulty:</h3>
+        <h3>2) Select your desired level of difficulty:</h3>
         <input type="radio" name="difficultyRadio" value="Easy" id="Easy" />Easy
         <input
           type="radio"
@@ -121,13 +121,14 @@
         />Strenuous
 
         <br />
+        <br />
 
         <button type="button" class="submitButton" onclick="trailSuggestions()">
           Submit
         </button>
 
         <br />
-        <h3>Suggested Trails</h3>
+        <h3>Suggested Paths</h3>
         <p id="difficultyResult"></p>
 
         <!--

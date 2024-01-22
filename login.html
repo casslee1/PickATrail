@@ -65,13 +65,20 @@
         <h2>Login</h2>
         <form>
           <label for="userID"
-            >Enter your name or email:<br />
+            >Enter your email:<br />
             <input id="userID" name="userID" type="text" required
           /></label>
           <br />
           <label for="newPassword"
             >Enter your password: <br /><input type="password" required
           /></label>
+          <br />
+          <input
+            type="button"
+            value="SUBMIT"
+            onclick="submitLogin();"
+            class="submitButton"
+          />
         </form>
       </div>
 
