@@ -79,48 +79,71 @@ main {
   }
 }
 
-#flexContainer {
-  display: flex;
-  flex-direction: column;
-  padding-top: 4%;
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-#createAccount {
-  max-width: 600px;
+#form {
+  max-width: 400px;
   margin-inline: auto;
   background-color: #565836;
   text-align: center;
   border-radius: 8px;
-
   padding-top: 0;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
+  margin-top: 4%;
 }
 
 label {
   font-family: Helvetica, Arial, sans-serif;
   color: #fae4bb;
+  text-align: left;
 }
 
-textarea {
-  margin: 10px 0 0 0;
-  width: 100%;
-  min-height: 2em;
-}
-
-.submitButton {
+#form button {
   background-color: #fae4bb;
   color: #565836;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   border: none;
   border-radius: 8px;
+  margin-top: 1em;
 }
 
-.submitButton:hover {
+#form button:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputArea input {
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.inputArea input:focus {
+  outline: 0;
+}
+
+.inputArea.success input {
+  border-color: green;
+}
+
+.inputArea.error input {
+  border-color: red;
+}
+
+.inputArea .error {
+  color: red;
+  font-size: 10px;
+  height: 13px;
 }
 
 /*footer {

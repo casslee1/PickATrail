@@ -128,7 +128,7 @@ slider.oninput = function() {
 
 }*/
 
-//Select trails by difficulty
+//Select trails
 function trailSuggestions() {    
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
@@ -152,8 +152,6 @@ function trailSuggestions() {
       }
 
 } 
-
-
 
 //Trail names and attributes
 let trails = [
