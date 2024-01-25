@@ -82,14 +82,14 @@ main {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 #form {
-  max-width: 400px;
+  max-width: 300px;
   margin-inline: auto;
   background-color: #565836;
   text-align: center;
   border-radius: 8px;
-  padding-top: 0;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-top: 1em;
+  padding-left: 1.5em;
+  padding-right: 3em;
   padding-bottom: 2em;
   margin-top: 4%;
 }

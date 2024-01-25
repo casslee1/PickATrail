@@ -38,6 +38,24 @@ function createAccount() {
   window.location.href = "./createAccount.html";
 }
 
+//fake login
+function submitLogin () {
+  const userID = document.getElementById('userID');
+  const userPassword = document.getElementById('userPassword');
+
+  const userIDValue = userID.value.trim();
+  const userPasswordValue = userPassword.value.trim();
+ 
+
+  if((userIDValue === '1234asdf') && (userPasswordValue === "1234asdf@gmail.com")){
+  window.location.href = "./trackATrail.html";}
+  else if(userIDValue !== '1234asdf'){
+    alert("The user ID does not exist.");}
+  else if((userIDValue === '1234asdf') && (userPasswordValue !== "1234asdf@gmail.com")){
+    alert("The password is incorrect.");
+  }
+}
+
 //Slider to select trails by length
 let slider = document.getElementById("myRange");
 let output = document.getElementById("selectedRange");
@@ -104,7 +122,6 @@ slider.oninput = function() {
   }
 
 }
-
 
 /*function trailByLength() {
  
@@ -181,3 +198,5 @@ let trails = [
     { trailName: "Bear Cove Point Path", lengthInKm: 11.9, difficulty: "Moderate"},
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate"}
   ];
+
+

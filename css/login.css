@@ -75,7 +75,7 @@ h2 {
   }
 }
 
-#flexContainer {
+.flexContainer {
   display: flex;
   flex-direction: column;
   padding-top: 4%;
@@ -116,6 +116,7 @@ h2 {
   font-size: 1em;
   border: none;
   border-radius: 8px;
+  margin-top: 1em;
 }
 
 .button:hover,

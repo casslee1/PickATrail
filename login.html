@@ -59,24 +59,24 @@
       </a>
     </div>
 
-    <div id="flexContainer">
+    <div class="flexContainer">
       <div id="login">
-        <!--login or create account, .php file?-->
-        <h2>Login</h2>
-        <form>
-          <label for="userID"
-            >Enter your email:<br />
-            <input id="userID" name="userID" type="text" required
-          /></label>
-          <br />
-          <label for="newPassword"
-            >Enter your password: <br /><input type="password" required
-          /></label>
-          <br />
+        <form id="loginForm">
+          <h2>Login</h2>
+
+          <div class="inputArea">
+            <label for="userID">Enter your email or username:</label>
+            <input id="userID" name="userID" type="text" />
+          </div>
+
+          <div class="inputArea">
+            <label for="userPassword">Enter your password:</label>
+            <input id="userPassword" name="userPassword" input type="text" />
+          </div>
           <input
             type="button"
-            value="SUBMIT"
-            onclick="submitLogin();"
+            value="Submit"
+            onclick="submitLogin()"
             class="submitButton"
           />
         </form>
