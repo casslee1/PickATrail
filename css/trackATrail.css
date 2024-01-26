@@ -110,3 +110,31 @@ footer {
   padding: 5%;
   color: #fae4bb;
 }
+
+.dropdownList {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  padding: 10px 30px;
+  font-size: 1em;
+  background-color: #fae4bb;
+  color: #565836;
+  border-radius: 8px;
+}
+
+#pathID {
+  display: none;
+  position: absolute;
+  background-color: #fae4bb;
+}
+
+#pathID a {
+  display: block;
+  font-size: 1em;
+  background-color: #fae4bb;
+  color: #565836;
+  text-decoration: none;
+  padding: 10px;
+}

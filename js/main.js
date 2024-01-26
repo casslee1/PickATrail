@@ -47,11 +47,11 @@ function submitLogin () {
   const userPasswordValue = userPassword.value.trim();
  
 
-  if((userIDValue === '1234asdf') && (userPasswordValue === "1234asdf@gmail.com")){
+  if((userIDValue === 'userID') && (userPasswordValue === "userPassword")){
   window.location.href = "./trackATrail.html";}
-  else if(userIDValue !== '1234asdf'){
+  else if(userIDValue !== 'userID'){
     alert("The user ID does not exist.");}
-  else if((userIDValue === '1234asdf') && (userPasswordValue !== "1234asdf@gmail.com")){
+  else if((userIDValue === 'userID') && (userPasswordValue !== "userPassword")){
     alert("The password is incorrect.");
   }
 }
@@ -200,3 +200,13 @@ let trails = [
   ];
 
 
+//Dropdown list in trail diary
+function showList() {
+  let paths = document.getElementById("pathID");
+
+  if (paths.style.display === "none") {
+    paths.style.display = "block";
+  } else {
+    paths.style.display = "none";
+  }
+}

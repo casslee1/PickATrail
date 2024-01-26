@@ -63,12 +63,25 @@
     <div class="flexContainer">
 
     <div id="recordTrails">
-      <!--enter information for completed trails-->
       <h2>Record Your Hike Here!</h2>  
-      <!--Add description/instructions-->  
+      
+      <h3>Path Name</h3>
+      <div class="dropdownList">
+        <button class="dropdownButton"
+            onclick="showList()">
+            Select Path
+        </button>
 
-      <h3>Trail Name</h3>
-      <!--dropdown menu of trail names-->
+        <div id="pathID" class="paths">
+            <a href="#">Long Shore Path</a>
+            <a href="#">Piccos Ridge Path</a>
+            <a href="#">White Horse Path</a>
+            <a href="#">Biscan Cove Path</a>
+            <a href="#">Stiles Cove Path</a>
+        </div>
+    </div>
+
+
 
       <h3>Your Review</h3>
       <label for="review">Provide a review:
