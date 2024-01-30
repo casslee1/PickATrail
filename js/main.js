@@ -34,7 +34,7 @@ function getStarted() {
 }
 
 //Create Account button on login page
-function createAccount() {
+/*function createAccount() {
   window.location.href = "./createAccount.html";
 }
 
@@ -54,7 +54,7 @@ function submitLogin () {
   else if((userIDValue === 'userID') && (userPasswordValue !== "userPassword")){
     alert("The password is incorrect.");
   }
-}
+}*/
 
 //Slider to select trails by length
 let slider = document.getElementById("myRange");

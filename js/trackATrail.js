@@ -28,6 +28,37 @@ function hamburgerNav() {
     window.location.href = "./login.html";
   }
 
+  //Create Account button on login page
+function createAccount() {
+    window.location.href = "./createAccount.html";
+  }
+  
+  //Fake login and record number of "logins"
+  function submitLogin () {
+    let userID = document.getElementById('userID');
+    let userPassword = document.getElementById('userPassword');
+  
+    let userIDValue = userID.value.trim();
+    let userPasswordValue = userPassword.value.trim();
+   
+  
+    if((userIDValue === 'userID') && (userPasswordValue === "userPassword")){
+    window.location.href = "./trackATrail.html";
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }}
+    else if(userIDValue !== 'userID'){
+      alert("The user ID does not exist.");}
+    else if((userIDValue === 'userID') && (userPasswordValue !== "userPassword")){
+      alert("The password is incorrect.");
+    }
+    
+}
+//Display number of logins
+document.getElementById("numOfLogins").innerHTML = localStorage.clickcount;
+
   //Array of paths, length, and difficulty
   const trails = [
     { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult"},
