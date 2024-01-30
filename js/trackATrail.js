@@ -60,6 +60,17 @@ function hamburgerNav() {
       trails.forEach((trail) => {
         let o = document.createElement("option");
         o.text = trail.trailName;
-        o.value = trail.lengthInKm;
+        o.value = trail.trailName;
         selectTrails.appendChild(o);
       });
+
+      //display results from trail diary entry
+      function display() {
+        document.getElementById("trailNameEntry").innerHTML = "Trail Name:   " +   document.form1.selectTrails.value;
+        document.getElementById("dateEntry").innerHTML = "Date:   " +   document.form1.hikeDate.value;
+        document.getElementById("reviewEntry").innerHTML = "Review:   " +   document.form1.review.value;
+        document.getElementById("weatherEntry").innerHTML += "Weather:   " +  document.form1.weather.value;
+        document.getElementById("hikingPartnersEntry").innerHTML += "Hiking Parners:   " +  document.form1.hikingPartners.value;
+        document.getElementById("wildlifeEntry").innerHTML += "Wildlife Observations:   " +  document.form1.wildlifeObservations.value;
+        
+      };

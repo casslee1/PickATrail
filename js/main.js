@@ -199,9 +199,7 @@ let trails = [
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate"}
   ];
 
-
-//Dropdown list in trail diary
-function showList() {
+/*function showList() {
   let paths = document.getElementById("pathID");
 
   if (paths.style.display === "none") {
@@ -209,4 +207,5 @@ function showList() {
   } else {
     paths.style.display = "none";
   }
-}
+}*/
+
