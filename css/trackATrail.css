@@ -78,7 +78,8 @@ h2,
 h3,
 h4,
 label,
-p {
+p,
+li {
   font-family: Helvetica, Arial, sans-serif;
   color: #fae4bb;
 }
@@ -92,13 +93,52 @@ p {
   max-width: 600px;
   margin: auto;
   margin-top: 3%;
-  background-color: #565836;
-  border-radius: 8px;
 }
 
 #recordTrails {
   padding: 1rem;
   margin: auto;
+  background-color: #565836;
+  border-radius: 8px;
+}
+
+.diaryEntry {
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+
+.diaryEntry li {
+  padding: 0.5rem;
+  background-color: #565836;
+  border-radius: 8px;
+}
+
+#buttonSub {
+  background-color: #fae4bb;
+  color: #565836;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  margin-right: 1em;
+}
+
+#buttonDel {
+  background-color: #fae4bb;
+  color: #565836;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+}
+
+#buttonContainer {
+  text-align: center;
 }
 
 /*#trailDiary {
@@ -115,7 +155,7 @@ footer {
   color: #fae4bb;
 }
 
-.dropdownList {
+/*.dropdownList {
   position: relative;
   display: inline-block;
 }
@@ -141,4 +181,4 @@ footer {
   color: #565836;
   text-decoration: none;
   padding: 10px;
-}
+}*/

@@ -73,7 +73,7 @@ const validateInputs = () => {
     if(usernameValue === '') {
         setError(username, 'Username is required');
     } else if (usernameValue.length < 5 ) {
-        setError(username, 'Username must be at least 5 character.'); 
+        setError(username, 'Username must be at least 5 characters'); 
     } else {
         setSuccess(username);
     }
@@ -89,7 +89,7 @@ const validateInputs = () => {
     if(passwordValue === '') {
         setError(password, 'Password is required');
     } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
+        setError(password, 'Password must be at least 8 characters')
     } else {
         setSuccess(password);
     }

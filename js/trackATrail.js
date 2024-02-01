@@ -88,7 +88,7 @@ document.getElementById("numOfLogins").innerHTML = localStorage.clickcount;
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate"}
   ];
       //Dropdown menu for path selection
-      trails.forEach((trail) => {
+       /*trails.forEach((trail) => {
         let o = document.createElement("option");
         o.text = trail.trailName;
         o.value = trail.trailName;
@@ -96,12 +96,34 @@ document.getElementById("numOfLogins").innerHTML = localStorage.clickcount;
       });
 
       //display results from trail diary entry
-      function display() {
+     function display() {
         document.getElementById("trailNameEntry").innerHTML = "Trail Name:   " +   document.form1.selectTrails.value;
         document.getElementById("dateEntry").innerHTML = "Date:   " +   document.form1.hikeDate.value;
         document.getElementById("reviewEntry").innerHTML = "Review:   " +   document.form1.review.value;
-        document.getElementById("weatherEntry").innerHTML += "Weather:   " +  document.form1.weather.value;
-        document.getElementById("hikingPartnersEntry").innerHTML += "Hiking Parners:   " +  document.form1.hikingPartners.value;
-        document.getElementById("wildlifeEntry").innerHTML += "Wildlife Observations:   " +  document.form1.wildlifeObservations.value;
-        
-      };
+        }; */
+
+//save trail diary in local storage and display entry on page
+const ul = document.querySelector('ul');
+const input = document.getElementById('trailEntry');
+let trailEntryArray = localStorage.getItem('trailEntry') ?
+JSON.parse(localStorage.getItem('trailEntry')) : [];
+
+trailEntryArray.forEach(addEntry);
+function addEntry(text){
+  const li = document.createElement('li')
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+function add(){
+  trailEntryArray.push(input.value);
+  localStorage.setItem('trailEntry', JSON.stringify(trailEntryArray));
+  addEntry(input.value);
+  input.value = '';
+}
+
+function del(){
+  localStorage.clear();
+  ul.innerHTML = '';
+  trailEntryArray = [];
+}

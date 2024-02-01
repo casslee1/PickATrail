@@ -69,70 +69,35 @@
 
       <h2>Record Your Hike Here!</h2>  
       
-      <h3>Path Name</h3>
-
-        <form name="form1">
+      <form name="form1">
+      <!--<h3>Path Name</h3>
       <select id="selectTrails">
-        <option value="">Select a Path</option>
+      <option value="">Select a Path</option>
       </select>
-
-      <h3>Your Review</h3>
-      <label for="review">Provide a review:
-      <textarea id="review" name="review" rows="3" cols="30" placeholder="favourite part of the trail was...hiking partners...wildlife observations"></textarea>
-
-      <!--<h3>Completion Time</h3>
-      <label for="startTime">Choose the time you started:</label>
-      <input type="time" id="startTime" name="startTime"/>
-      <br />
-      <label for="finishTime">Choose the time you finished:</label>
-      <input type="time" id="finishTime" name="finishTime"/>-->
 
       <h3>Date</h3>
       <label for="hikeDate">Enter the date of your hike:</label>
-      <input type="date" id="hikeDate" name="hikeDate"/>
+      <input type="date" id="hikeDate" name="hikeDate"/>-->
 
-      <h3>Weather</h3>
-      <label for="weather">What was the weather:<input id="weather" name="weather" type="text"/></label>
+      <h3>Your Diary Entry:</h3>
+  
+      <textarea id="trailEntry" name="trailEntry" rows="3" cols="35" placeholder="favourite part of the trail was...hiking partners...wildlife observations"></textarea>
 
-      <!--<h3>Hiking Partners</h3>
-      <label for="hikingPartners">List your hiking partners: <input id="hikingPartners" name="hikingPartners" type="text"/></label>
-
-      <h3>Wildlife</h3>
-      <label for="wildlifeObservations">List your wildlife observations: <input id="wildlifeObservations" name="wildlifeObservations" type="text"/></label>-->
-
-      <p><input type="button" VALUE="Enter hike information" onClick="display();"></p>
+      <p id="buttonContainer"><input type="button" id="buttonSub" value="Submit Entry" onClick="add()"> 
+      <input type="button" id="buttonDel" value="Delete Entries" onClick="del()"></p>
     </form>
-    </div>
 
-    <div class="diaryEntry" id="diaryEntry">
+  </div>
+  <ul class="diaryEntry"></ul>
+  </div>
+    
+
+    <!--<div class="diaryEntry" id="diaryEntry">
       <p id="trailNameEntry"></p>
       <p id="dateEntry"></p>
       <p id="reviewEntry"></p>
-      <p id="weatherEntry"></p>
-      <p id="hikingPartnersEntry"></p>
-      <p id="wildlifeEntry"></p>
-    </div>
-    <!--comment add trail diary once rocorded hikes are working comment
-      <div id="trailDiary">
-      <h2>Trail Diary</h2>
-      <div>
-        <h3>Stats</h3>
-        comment include: number of trails hiked, number of hikes total, # and % of trails hiked, % of overall ECT completed comment
-
-        <h4>Total number of hikes:</h4>
-
-        <h4>Number of trails hiked:</h4>
-
-        <h4>Percentage of East Coast Trail completed:</h4>
-
-      </div>
-
-      <div>
-      comment 'card' with details for each entry comment
-      </div>
-
     </div>-->
-
+   
     </div>
 
     <footer>
