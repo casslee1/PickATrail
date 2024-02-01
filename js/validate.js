@@ -69,37 +69,56 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
+    let userNameValid = true;
+    let emailValid = true;
+    let passwordValid = true;
+    let password2Valid = true;
 
     if(usernameValue === '') {
         setError(username, 'Username is required');
+        userNameValid = false;
     } else if (usernameValue.length < 5 ) {
-        setError(username, 'Username must be at least 5 characters'); 
+        setError(username, 'Username must be at least 5 characters');
+        userNameValid = false; 
     } else {
         setSuccess(username);
+        userNameValid = true;
     }
 
     if(emailValue === '') {
         setError(email, 'Email is required');
+        emailValid = false;
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
+        emailValid = false;
     } else {
         setSuccess(email);
+        emailValid = true;
     }
 
     if(passwordValue === '') {
         setError(password, 'Password is required');
+        passwordValid = false;
     } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 characters')
+        setError(password, 'Password must be at least 8 characters');
+        passwordValid = false;
     } else {
         setSuccess(password);
+        passwordValid = true;
     }
 
     if(password2Value === '') {
         setError(password2, 'Please confirm your password');
+        password2Valid = false;
     } else if (password2Value !== passwordValue) {
         setError(password2, "Passwords doesn't match");
+        password2Valid = false;
     } else {
         setSuccess(password2);
+        password2Valid = true;
     }
 
+    if(userNameValid === true && emailValid === true && passwordValid === true && password2Valid === true){
+        alert ("Account Created");
+    }
 }
