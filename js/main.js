@@ -160,7 +160,6 @@ function trailSuggestions() {
 
       let text = "<ul>";
       newArr.forEach(myFunction);
-      text += "</ul>";
       
       document.getElementById("difficultyResult").innerHTML = text;
 

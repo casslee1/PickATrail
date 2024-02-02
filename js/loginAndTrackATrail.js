@@ -44,11 +44,11 @@ function createAccount() {
   
     if((userIDValue === 'userID') && (userPasswordValue === "userPassword")){
     window.location.href = "./trackATrail.html";
-    if (localStorage.clickcount) {
+    /*if (localStorage.clickcount) {
       localStorage.clickcount = Number(localStorage.clickcount)+1;
     } else {
       localStorage.clickcount = 1;
-    }}
+    }*/}
     else if(userIDValue !== 'userID'){
       alert("The user ID does not exist.");}
     else if((userIDValue === 'userID') && (userPasswordValue !== "userPassword")){
@@ -57,7 +57,7 @@ function createAccount() {
     
 }
 //Display number of logins
-document.getElementById("numOfLogins").innerHTML = localStorage.clickcount;
+//document.getElementById("numOfLogins").innerHTML = localStorage.clickcount;
 
   //Array of paths, length, and difficulty
   const trails = [
