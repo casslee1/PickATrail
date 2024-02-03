@@ -198,6 +198,33 @@ let trails = [
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate"}
   ];
 
+
+  let map;
+
+async function initMap() {
+  // The location of Beaches Path
+  const position = { lat: 47.26247133670132, lng: -52.811623612792076};
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 13,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Beaches Path",
+  });
+}
+
+initMap();
 /*function showList() {
   let paths = document.getElementById("pathID");
 

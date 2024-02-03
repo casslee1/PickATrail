@@ -85,6 +85,7 @@ h1 {
 
 .pickContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-radius: 8px;
   max-width: 90%;
@@ -148,6 +149,14 @@ h1 {
   text-align: center;
   padding: 1rem;
 }*/
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 400px;
+}
 
 footer {
   text-align: center;
