@@ -129,6 +129,8 @@ function trailSuggestions() {
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
   
+      newArr=[];
+
           trails.forEach(({trailName, difficulty, lengthInKm, lat, lng}) => {
         if(difficulty == getSelectedValue.value && lengthInKm <= slider.value){
           newArr.push({trailName, lengthInKm, lat, lng})
@@ -188,46 +190,50 @@ function trailSuggestions() {
 
 //Trail names and attributes
 let trails = [
-    { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Piccos Ridge Path", lengthInKm: 14.5, difficulty: "Strenuous", lat: 0, lng: 0},
-    { trailName: "White Horse Path", lengthInKm: 18.2, difficulty: "Strenuous", lat: 0, lng: 0},
-    { trailName: "Biscan Cove Path", lengthInKm: 7, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Stiles Cove Path", lengthInKm: 15.1, difficulty: "Moderate", lat: 0, lng: 0},
-    { trailName: "Father Troys Trail", lengthInKm: 8.9, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "Silver Mine Head Path", lengthInKm: 3.8, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate", lat: 47.392152, lng: -52.402483},
-    { trailName: "Sugarloaf Path", lengthInKm: 8.8, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Deadmans Bay Path", lengthInKm: 10.5, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Cape Spear Path", lengthInKm: 15.4, difficulty: "Moderate", lat: 0, lng: 0},
-    { trailName: "Motion Path", lengthInKm: 13.8, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Spout Path", lengthInKm: 16.2, difficulty: "Strenuous", lat: 0, lng: 0},
-    { trailName: "Mickeleens Path", lengthInKm: 7.2, difficulty: "Moderate", lat: 0, lng: 0},
-    { trailName: "Beaches Path", lengthInKm: 7.1, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "Tinkers Point Path", lengthInKm: 5, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "La Manche Village Path", lengthInKm: 6.4, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "Flamber Head Path", lengthInKm: 11.5, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
-    { trailName: "Brigus Head Path", lengthInKm: 6.4, difficulty: "Moderate", lat: 0, lng: 0},
-    { trailName: "Cape Broyle Head Path", lengthInKm: 19.4, difficulty: "Difficult to Strenuous", lat: 0, lng: 0},
-    { trailName: "Caplin Bay Path", lengthInKm: 5.6, difficulty: "Easy to Moderate", lat: 0, lng: 0},
-    { trailName: "Sounding Hills Path", lengthInKm: 5.4, difficulty: "Easy to Moderate", lat: 0, lng: 0},
-    { trailName: "Spurwink Island Path", lengthInKm: 20.4, difficulty: "Difficult", lat: 0, lng: 0},
-    { trailName: "Bear Cove Point Path", lengthInKm: 11.9, difficulty: "Moderate", lat: 0, lng: 0},
-    { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate", lat: 0, lng: 0}
+    { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult", lat: 47.544593, lng: -52.917690},
+    { trailName: "Piccos Ridge Path", lengthInKm: 14.5, difficulty: "Strenuous", lat: 47.629338000061615, lng: -52.858152260358196},
+    { trailName: "White Horse Path", lengthInKm: 18.2, difficulty: "Strenuous", lat: 47.72483252213966, lng: -52.83269907474295},
+    { trailName: "Biscan Cove Path", lengthInKm: 7, difficulty: "Moderate to Difficult", lat: 47.77576619454907, lng: -52.76427323241235},
+    { trailName: "Stiles Cove Path", lengthInKm: 15.1, difficulty: "Moderate", lat: 47.808192701271295, lng: -52.787024732409975},
+    { trailName: "Father Troys Trail", lengthInKm: 8.9, difficulty: "Easy", lat: 47.70064844413555, lng: -52.70265049009049},
+    { trailName: "Silver Mine Head Path", lengthInKm: 3.8, difficulty: "Easy", lat: 47.658105498543804, lng: -52.701918757748224},
+    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate", lat: 47.63471954989772, lng: -52.66933962595794},
+    { trailName: "Sugarloaf Path", lengthInKm: 8.8, difficulty: "Moderate to Difficult", lat: 47.58348138022673, lng: -52.67796173242585},
+    { trailName: "Deadmans Bay Path", lengthInKm: 10.5, difficulty: "Moderate to Difficult", lat: 47.52470725029297, lng: -52.706913807546094},
+    { trailName: "Cape Spear Path", lengthInKm: 15.4, difficulty: "Moderate", lat: 47.52267182625721, lng: -52.62342849031273},
+    { trailName: "Motion Path", lengthInKm: 13.8, difficulty: "Moderate to Difficult", lat: 47.46293009306454, lng: -52.70485557661655},
+    { trailName: "Spout Path", lengthInKm: 16.2, difficulty: "Strenuous", lat: 47.43618180684211, lng: -52.759185607581855},
+    { trailName: "Mickeleens Path", lengthInKm: 7.2, difficulty: "Moderate", lat: 47.308652328760424, lng: -52.81138658404936},
+    { trailName: "Beaches Path", lengthInKm: 7.1, difficulty: "Easy", lat: 47.26264089655869, lng: -52.81160787477549},
+    { trailName: "Tinkers Point Path", lengthInKm: 5, difficulty: "Easy", lat: 47.23750664702713, lng: -52.830909800147516},
+    { trailName: "La Manche Village Path", lengthInKm: 6.4, difficulty: "Easy", lat: 47.16276575348777, lng: -52.88043452263977},
+    { trailName: "Flamber Head Path", lengthInKm: 11.5, difficulty: "Moderate to Difficult", lat: 47.163774511345544, lng: -52.880965828259136},
+    { trailName: "Brigus Head Path", lengthInKm: 6.4, difficulty: "Moderate", lat: 47.099953051810076, lng: -52.89843357478685},
+    { trailName: "Cape Broyle Head Path", lengthInKm: 19.4, difficulty: "Difficult to Strenuous", lat: 47.088986368409074, lng: -52.94848536129695},
+    { trailName: "Caplin Bay Path", lengthInKm: 5.6, difficulty: "Easy to Moderate", lat: 47.02397485788381, lng: -52.88492393785894},
+    { trailName: "Sounding Hills Path", lengthInKm: 5.4, difficulty: "Easy to Moderate", lat: 47.01198015191497, lng: -52.933878740574954},
+    { trailName: "Spurwink Island Path", lengthInKm: 20.4, difficulty: "Difficult", lat: 47.01052004601296, lng: -52.96945426130245},
+    { trailName: "Bear Cove Point Path", lengthInKm: 11.9, difficulty: "Moderate", lat: 46.96094518649381, lng: -52.914186661305855},
+    { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate", lat: 46.8640376899864, lng: -52.93893395216589}
   ];
 
   let map; // Declare map variable
+  let markers = [];
 
         // Initialize Google Map
         function initMap() {
             // Create a map object and specify the DOM element for display.
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 47.5, lng: -52.7 }, // Center the map to default location
-                zoom: 9 // Adjust the zoom level as needed
+                center: { lat: 47.35, lng: -52.9 }, // Center the map to default location
+                zoom: 8 // Adjust the zoom level as needed
             });
         }
 
         // Function to add markers
         function addMarkers() {
+
+          clearMarkers();
+
             // Loop through each location and add a marker
             newArr.forEach(function(location) {
                 // Create a marker for each location
@@ -246,8 +252,19 @@ let trails = [
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
-            });
+
+                markers.push(marker);
+                });
         }
+
+        function clearMarkers() {
+          // Loop through markers and set map to null
+          markers.forEach(function(marker) {
+              marker.setMap(null);
+          });
+          // Clear the markers array
+          markers = [];
+      }
 
 
 
