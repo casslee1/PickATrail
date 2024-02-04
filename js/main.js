@@ -123,36 +123,13 @@ slider.oninput = function() {
 
 }
 
-/*function trailByLength() {
- 
-  let lengthArr=[];
-
-  trails.forEach(({trailName, lengthInKm}) => {
-    if(lengthInKm <= slider.value){
-      lengthArr.push(trailName);
-    }
-  });
-
-  let text = "<ul>";
-  lengthArr.forEach(myFunction);
-  text += "</ul>"; 
-  
-  document.getElementById("lengthResult").innerHTML = text;
-
-  function myFunction(value) {
-    text += "<li>" + value + "</li>";
-  }
-
-}*/
-
+let newArr=[];
 //Select trails
 function trailSuggestions() {    
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
   
-    let newArr=[];
-
-      trails.forEach(({trailName, difficulty, lengthInKm, lat, lng}) => {
+          trails.forEach(({trailName, difficulty, lengthInKm, lat, lng}) => {
         if(difficulty == getSelectedValue.value && lengthInKm <= slider.value){
           newArr.push({trailName, lengthInKm, lat, lng})
         }
@@ -189,8 +166,25 @@ function trailSuggestions() {
       function myFunction(value) {
         text += "<li>" + value + "</li>";
       }*/
+    // Function to add markers
+    function addMarkers() {
+      // Loop through each location and add a marker
+      newArr.forEach(function(newArr) {
+          // Create a marker for each location
+          const marker = new google.maps.Marker({
+              position: { lat: newArr.lat, lng: location.lng },
+              map: map,
+              title: location.name // Optionally, you can set a title for each marker
+          });
 
-} 
+          // Optionally, add an info window to each marker
+          const infowindow = new google.maps.InfoWindow({
+              content: location.name // Display the name as info window content
+          });
+      });
+    }
+ 
+      } 
 
 //Trail names and attributes
 let trails = [
@@ -201,7 +195,7 @@ let trails = [
     { trailName: "Stiles Cove Path", lengthInKm: 15.1, difficulty: "Moderate", lat: 0, lng: 0},
     { trailName: "Father Troys Trail", lengthInKm: 8.9, difficulty: "Easy", lat: 0, lng: 0},
     { trailName: "Silver Mine Head Path", lengthInKm: 3.8, difficulty: "Easy", lat: 0, lng: 0},
-    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate", lat: 47.392152, lng: -52402483},
+    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate", lat: 47.392152, lng: -52.402483},
     { trailName: "Sugarloaf Path", lengthInKm: 8.8, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
     { trailName: "Deadmans Bay Path", lengthInKm: 10.5, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
     { trailName: "Cape Spear Path", lengthInKm: 15.4, difficulty: "Moderate", lat: 0, lng: 0},
@@ -221,40 +215,40 @@ let trails = [
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate", lat: 0, lng: 0}
   ];
 
+  let map; // Declare map variable
 
-  let map;
+        // Initialize Google Map
+        function initMap() {
+            // Create a map object and specify the DOM element for display.
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 47.5, lng: -52.7 }, // Center the map to default location
+                zoom: 9 // Adjust the zoom level as needed
+            });
+        }
 
-async function initMap() {
-  // The location of Beaches Path
-  const position = { lat: 47.26247133670132, lng: -52.811623612792076};
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        // Function to add markers
+        function addMarkers() {
+            // Loop through each location and add a marker
+            newArr.forEach(function(location) {
+                // Create a marker for each location
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.trailName // Optionally, you can set a title for each marker
+                });
 
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 13,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
+                // Optionally, add an info window to each marker
+                const infowindow = new google.maps.InfoWindow({
+                    content: location.trailName // Display the name as info window content
+                });
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Beaches Path",
-  });
-}
+                // Add click event listener to display info window when marker is clicked
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            });
+        }
 
-initMap();
-/*function showList() {
-  let paths = document.getElementById("pathID");
 
-  if (paths.style.display === "none") {
-    paths.style.display = "block";
-  } else {
-    paths.style.display = "none";
-  }
-}*/
+
 
