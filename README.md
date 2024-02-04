@@ -1,25 +1,34 @@
-# Pick A Trail
+# :sunrise_over_mountains: Choose Your Path
 
-This website will help people pick a segment of the East Coast Trail to hike based on attributes they're interested in. It will be built using HTML, CSS, and JavaScript.
+## Overview
+Welcome to Choose Your Path! This site helps people pick a segment of the East Coast Trail to hike. They can also record a diary entry to help them remember their day.
 
 ## Description
 
-This site will provide several attributes that can be selected to help users choose which portion of the East Coast Trail they would like to hike. The attributes that I would like to start with are:
+To decide which East Coast Trail path you want to hike you can get suggestions based on the following attributes:
 
-1. Driving time or distance from your location to the trail head.
-2. Length of the segment of the trail.
-3. Difficulty rating as determined by the east Coast Trail Association.
+1. Length of the path.
+2. Difficulty rating as determined by the east Coast Trail Association.
 
-Further attributes to be added if time allows would be natural features (waterfall, sea stack, etc.) and archaeological/historical features (root cellars, historic plaques, etc.).
+Once you decide how far you want to go and how difficult you want your hike you'll get a list of suggestions and the trailheads will be displayed on a map.
 
-It will also include links to the Environment Canada Weather Forecast site and the Government of Canada Sunrise/Sunset Calculator.
+Make an entry in your trail diary so you can keep track of where you've been and what your favourite paths are.
 
-In addition to selecting which trail to hike, users will also be able to create an acccount and record the details of their hikes.
+## :seedling: Motivation
 
-## Motivation
+Sometimes you just want a quick and easy trail and sometimes you want more of a commitment. I wanted to make it easier to find a hike that matches your mood, abilities, and time available. There are also times I've sat watching a pod of whales breaching for almost and hour or found an amazing berry patch and can't remember which path I was on! That's what the diary is for. 
+This is my Module 1 Get Coding project and helped me in learning to code. 
 
-This project will help me improve my HTML and CSS skills and learn JavaScript. It will also bring in my background in GIS by using either the Goole Maps API or the ArcGIS SDK to calculate distances or drive times from the user’s address to the trail heads.
+## :computer: Built With
 
-## Diagram
+- HTML
+- CSS
+- JavaScript
 
-![pickATrailSketch1](https://github.com/casslee1/PickATrail/assets/84476607/4df170e1-38f8-4be8-ba27-d7a5bdb7852f)
+## 
+
+
+![image](https://github.com/casslee1/PickATrail/assets/84476607/cade5b34-ae8b-4414-a93e-875e52d95988)
+
+
+
