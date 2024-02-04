@@ -89,10 +89,12 @@ img {
   background-color: #565836;
   color: #fae4bb;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  border: none;
+  font-size: 1.25em;
   border-radius: 8px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  border-color: #fae4bb;
+  border-width: 1px;
 }
 
 .button:hover {
