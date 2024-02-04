@@ -1,4 +1,4 @@
-//Navigation bar
+//Switch to hamburger symbol navigation bar for small screens
 function hamburgerNav() {
     let x = document.getElementById("navigationBar");
     if (x.className === "navigationBar") {
@@ -8,6 +8,7 @@ function hamburgerNav() {
     }
   }
   
+  //Navigation bar
   function goHome() {
     window.location.href = "./index.html";
   }

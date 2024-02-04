@@ -1,4 +1,4 @@
-//Navigation bar
+//Switch to hamburger symbol navigation bar for small screens
 function hamburgerNav() {
     let x = document.getElementById("navigationBar");
     if (x.className === "navigationBar") {
@@ -8,6 +8,7 @@ function hamburgerNav() {
     }
   }
   
+  //Navigation bar
   function goHome() {
     window.location.href = "./index.html";
   }
@@ -28,19 +29,22 @@ function hamburgerNav() {
     window.location.href = "./login.html";
   }
 
-//validate account creation form
+//Validate account creation form
+//Use form inputs to set constants
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+//Event listener to start validation when form is submitted
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
 });
 
+//Set for error in entry
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -50,6 +54,7 @@ const setError = (element, message) => {
     inputControl.classList.remove('success');
 };
 
+//Set entry as succussful
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -59,11 +64,13 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
+//Check if the email address is valid
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
 
+//check validity of entries and set to true or false
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
@@ -118,6 +125,7 @@ const validateInputs = () => {
         password2Valid = true;
     }
 
+    //When all entries are true send account created alert
     if(userNameValid === true && emailValid === true && passwordValid === true && password2Valid === true){
         alert ("Account Created");
     }

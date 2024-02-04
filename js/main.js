@@ -1,4 +1,4 @@
-//Navigation bar
+//Switch to hamburger symbol navigation bar for small screens
 function hamburgerNav() {
   let x = document.getElementById("navigationBar");
   if (x.className === "navigationBar") {
@@ -8,6 +8,7 @@ function hamburgerNav() {
   }
 }
 
+//Navigation bar
 function goHome() {
   window.location.href = "./index.html";
 }
@@ -33,29 +34,6 @@ function getStarted() {
   window.location.href = "./pickATrail.html";
 }
 
-//Create Account button on login page
-/*function createAccount() {
-  window.location.href = "./createAccount.html";
-}
-
-//fake login
-function submitLogin () {
-  const userID = document.getElementById('userID');
-  const userPassword = document.getElementById('userPassword');
-
-  const userIDValue = userID.value.trim();
-  const userPasswordValue = userPassword.value.trim();
- 
-
-  if((userIDValue === 'userID') && (userPasswordValue === "userPassword")){
-  window.location.href = "./trackATrail.html";}
-  else if(userIDValue !== 'userID'){
-    alert("The user ID does not exist.");}
-  else if((userIDValue === 'userID') && (userPasswordValue !== "userPassword")){
-    alert("The password is incorrect.");
-  }
-}*/
-
 //Slider to select trails by length
 let slider = document.getElementById("myRange");
 let output = document.getElementById("selectedRange");
@@ -64,7 +42,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 
-  //Change availability of Difficulty radio buttons based on trail length slider
+  //Change availability of difficulty radio buttons based on trail length slider selection
   let trailDifficultyArr=[];
   trails.forEach(({difficulty, lengthInKm}) => {
     if(lengthInKm <= slider.value){
@@ -123,12 +101,15 @@ slider.oninput = function() {
 
 }
 
+//Array to be used for trail selection and trailhead display on map
 let newArr=[];
+
 //Select trails
 function trailSuggestions() {    
   let getSelectedValue = document.querySelector(   
       'input[name="difficultyRadio"]:checked'); 
   
+      //Clear previous content
       newArr=[];
 
           trails.forEach(({trailName, difficulty, lengthInKm, lat, lng}) => {
@@ -140,12 +121,12 @@ function trailSuggestions() {
       function displayObjects(objects) {
         const trailListContainer = document.getElementById('trailSuggestions');
     
-        // Clear previous content
+        //Clear previous content
         trailListContainer.innerHTML = '';
 
         const trailsList = document.createElement('ul');
     
-        // Loop through each object and create HTML elements to display them
+        //Loop through each object in array and create list items for display
         objects.forEach(object => {
             const listItem = document.createElement('li');
             listItem.classList.add('list-item');
@@ -160,28 +141,18 @@ function trailSuggestions() {
     // Call the displayObjects function with the list of objects
     displayObjects(newArr);
 
-      /*let text = "<ul>";
-      newArr.forEach(myFunction);
-      
-      document.getElementById("difficultyResult").innerHTML = text;
-
-      function myFunction(value) {
-        text += "<li>" + value + "</li>";
-      }*/
-    // Function to add markers
+    //Function to add trailhead markers for suggested trails to map
     function addMarkers() {
-      // Loop through each location and add a marker
-      newArr.forEach(function(newArr) {
-          // Create a marker for each location
-          const marker = new google.maps.Marker({
+            newArr.forEach(function(newArr) {
+              const marker = new google.maps.Marker({
               position: { lat: newArr.lat, lng: location.lng },
               map: map,
-              title: location.name // Optionally, you can set a title for each marker
+              title: location.name
           });
 
-          // Optionally, add an info window to each marker
-          const infowindow = new google.maps.InfoWindow({
-              content: location.name // Display the name as info window content
+          //Add name of each path as info window
+                  const infowindow = new google.maps.InfoWindow({
+              content: location.name 
           });
       });
     }
@@ -217,52 +188,52 @@ let trails = [
     { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate", lat: 46.8640376899864, lng: -52.93893395216589}
   ];
 
-  let map; // Declare map variable
+//Add map to page
+  let map; 
   let markers = [];
 
-        // Initialize Google Map
         function initMap() {
-            // Create a map object and specify the DOM element for display.
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 47.35, lng: -52.9 }, // Center the map to default location
-                zoom: 8 // Adjust the zoom level as needed
+                map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 47.35, lng: -52.9 }, 
+                zoom: 8 
             });
         }
 
-        // Function to add markers
+        //Function to add markers
         function addMarkers() {
 
+          //Clear previous markers
           clearMarkers();
 
-            // Loop through each location and add a marker
+            //Loop through each location and add a marker
             newArr.forEach(function(location) {
-                // Create a marker for each location
-                const marker = new google.maps.Marker({
+                    const marker = new google.maps.Marker({
                     position: { lat: location.lat, lng: location.lng },
                     map: map,
                     title: location.trailName // Optionally, you can set a title for each marker
                 });
 
-                // Optionally, add an info window to each marker
+                //Add info window to each marker
                 const infowindow = new google.maps.InfoWindow({
-                    content: location.trailName // Display the name as info window content
+                    content: location.trailName 
                 });
 
-                // Add click event listener to display info window when marker is clicked
+                //Add event listener to display info window when marker is clicked
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
 
+                //Push markers to marker array
                 markers.push(marker);
                 });
         }
 
+        //Function to clear markers from previouse suggestions
         function clearMarkers() {
-          // Loop through markers and set map to null
-          markers.forEach(function(marker) {
-              marker.setMap(null);
+            markers.forEach(function(marker) {
+            marker.setMap(null);
           });
-          // Clear the markers array
+          
           markers = [];
       }
 
