@@ -152,50 +152,73 @@ function trailSuggestions() {
   
     let newArr=[];
 
-      trails.forEach(({trailName, difficulty, lengthInKm}) => {
+      trails.forEach(({trailName, difficulty, lengthInKm, lat, lng}) => {
         if(difficulty == getSelectedValue.value && lengthInKm <= slider.value){
-          newArr.push(trailName);
+          newArr.push({trailName, lengthInKm, lat, lng})
         }
       });
 
-      let text = "<ul>";
+      function displayObjects(objects) {
+        const trailListContainer = document.getElementById('trailSuggestions');
+    
+        // Clear previous content
+        trailListContainer.innerHTML = '';
+
+        const trailsList = document.createElement('ul');
+    
+        // Loop through each object and create HTML elements to display them
+        objects.forEach(object => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('list-item');
+            listItem.innerHTML = `
+                <p>${object.trailName} ${object.lengthInKm}km</p>
+                 `;
+            trailsList.appendChild(listItem);
+        });
+        trailListContainer.appendChild(trailsList);
+    }
+    
+    // Call the displayObjects function with the list of objects
+    displayObjects(newArr);
+
+      /*let text = "<ul>";
       newArr.forEach(myFunction);
       
       document.getElementById("difficultyResult").innerHTML = text;
 
       function myFunction(value) {
         text += "<li>" + value + "</li>";
-      }
+      }*/
 
 } 
 
 //Trail names and attributes
 let trails = [
-    { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult"},
-    { trailName: "Piccos Ridge Path", lengthInKm: 14.5, difficulty: "Strenuous"},
-    { trailName: "White Horse Path", lengthInKm: 18.2, difficulty: "Strenuous"},
-    { trailName: "Biscan Cove Path", lengthInKm: 7, difficulty: "Moderate to Difficult"},
-    { trailName: "Stiles Cove Path", lengthInKm: 15.1, difficulty: "Moderate"},
-    { trailName: "Father Troys Trail", lengthInKm: 8.9, difficulty: "Easy"},
-    { trailName: "Silver Mine Head Path", lengthInKm: 3.8, difficulty: "Easy"},
-    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate"},
-    { trailName: "Sugarloaf Path", lengthInKm: 8.8, difficulty: "Moderate to Difficult"},
-    { trailName: "Deadmans Bay Path", lengthInKm: 10.5, difficulty: "Moderate to Difficult"},
-    { trailName: "Cape Spear Path", lengthInKm: 15.4, difficulty: "Moderate"},
-    { trailName: "Motion Path", lengthInKm: 13.8, difficulty: "Moderate to Difficult"},
-    { trailName: "Spout Path", lengthInKm: 16.2, difficulty: "Strenuous"},
-    { trailName: "Mickeleens Path", lengthInKm: 7.2, difficulty: "Moderate"},
-    { trailName: "Beaches Path", lengthInKm: 7.1, difficulty: "Easy"},
-    { trailName: "Tinkers Point Path", lengthInKm: 5, difficulty: "Easy"},
-    { trailName: "La Manche Village Path", lengthInKm: 6.4, difficulty: "Easy"},
-    { trailName: "Flamber Head Path", lengthInKm: 11.5, difficulty: "Moderate to Difficult"},
-    { trailName: "Brigus Head Path", lengthInKm: 6.4, difficulty: "Moderate"},
-    { trailName: "Cape Broyle Head Path", lengthInKm: 19.4, difficulty: "Difficult to Strenuous"},
-    { trailName: "Caplin Bay Path", lengthInKm: 5.6, difficulty: "Easy to Moderate"},
-    { trailName: "Sounding Hills Path", lengthInKm: 5.4, difficulty: "Easy to Moderate"},
-    { trailName: "Spurwink Island Path", lengthInKm: 20.4, difficulty: "Difficult"},
-    { trailName: "Bear Cove Point Path", lengthInKm: 11.9, difficulty: "Moderate"},
-    { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate"}
+    { trailName: "Long Shore Path", lengthInKm: 17.2, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Piccos Ridge Path", lengthInKm: 14.5, difficulty: "Strenuous", lat: 0, lng: 0},
+    { trailName: "White Horse Path", lengthInKm: 18.2, difficulty: "Strenuous", lat: 0, lng: 0},
+    { trailName: "Biscan Cove Path", lengthInKm: 7, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Stiles Cove Path", lengthInKm: 15.1, difficulty: "Moderate", lat: 0, lng: 0},
+    { trailName: "Father Troys Trail", lengthInKm: 8.9, difficulty: "Easy", lat: 0, lng: 0},
+    { trailName: "Silver Mine Head Path", lengthInKm: 3.8, difficulty: "Easy", lat: 0, lng: 0},
+    { trailName: "Cobblers Path", lengthInKm: 5, difficulty: "Moderate", lat: 47.392152, lng: -52402483},
+    { trailName: "Sugarloaf Path", lengthInKm: 8.8, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Deadmans Bay Path", lengthInKm: 10.5, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Cape Spear Path", lengthInKm: 15.4, difficulty: "Moderate", lat: 0, lng: 0},
+    { trailName: "Motion Path", lengthInKm: 13.8, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Spout Path", lengthInKm: 16.2, difficulty: "Strenuous", lat: 0, lng: 0},
+    { trailName: "Mickeleens Path", lengthInKm: 7.2, difficulty: "Moderate", lat: 0, lng: 0},
+    { trailName: "Beaches Path", lengthInKm: 7.1, difficulty: "Easy", lat: 0, lng: 0},
+    { trailName: "Tinkers Point Path", lengthInKm: 5, difficulty: "Easy", lat: 0, lng: 0},
+    { trailName: "La Manche Village Path", lengthInKm: 6.4, difficulty: "Easy", lat: 0, lng: 0},
+    { trailName: "Flamber Head Path", lengthInKm: 11.5, difficulty: "Moderate to Difficult", lat: 0, lng: 0},
+    { trailName: "Brigus Head Path", lengthInKm: 6.4, difficulty: "Moderate", lat: 0, lng: 0},
+    { trailName: "Cape Broyle Head Path", lengthInKm: 19.4, difficulty: "Difficult to Strenuous", lat: 0, lng: 0},
+    { trailName: "Caplin Bay Path", lengthInKm: 5.6, difficulty: "Easy to Moderate", lat: 0, lng: 0},
+    { trailName: "Sounding Hills Path", lengthInKm: 5.4, difficulty: "Easy to Moderate", lat: 0, lng: 0},
+    { trailName: "Spurwink Island Path", lengthInKm: 20.4, difficulty: "Difficult", lat: 0, lng: 0},
+    { trailName: "Bear Cove Point Path", lengthInKm: 11.9, difficulty: "Moderate", lat: 0, lng: 0},
+    { trailName: "Island Meadow Path", lengthInKm: 10, difficulty: "Moderate", lat: 0, lng: 0}
   ];
 
 
