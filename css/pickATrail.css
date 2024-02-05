@@ -145,15 +145,6 @@ h1 {
   justify-content: center;
 }
 
-/*#usefulLinks {
-  text-align: center;
-  padding: 1rem;
-}*/
-
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
 #map {
   height: 400px;
 }
