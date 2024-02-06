@@ -127,6 +127,6 @@ const validateInputs = () => {
 
     //When all entries are true send account created alert
     if(userNameValid === true && emailValid === true && passwordValid === true && password2Valid === true){
-        alert ("Account Created");
+        window.location.href = "./trackATrail.html";
     }
 }
