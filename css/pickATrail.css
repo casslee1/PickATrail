@@ -145,6 +145,9 @@ h1 {
   justify-content: center;
 }
 
+#mapContainer {
+  color: black;
+}
 #map {
   height: 400px;
 }
