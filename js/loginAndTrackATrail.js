@@ -117,10 +117,15 @@ function addEntry(text){
 }
 
 function add(){
+  if (input.value === ""){
+    alert("Please type a diary entry.")
+  }
+  else{
   trailEntryArray.push(input.value);
   localStorage.setItem('trailEntry', JSON.stringify(trailEntryArray));
   addEntry(input.value);
   input.value = '';
+}
 }
 
 function del(){
