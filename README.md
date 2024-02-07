@@ -12,7 +12,7 @@ To decide which East Coast Trail path you want to hike you can get suggestions b
 
 Once you decide how far you want to go and how difficult you want your hike you'll get a list of suggestions and the trailheads will be displayed on a map.
 
-Make an entry in your trail diary so you can keep track of where you've been and what your favourite paths are.
+Login to make an entry in your trail diary so you can keep track of where you've been and what your favourite paths are.
 
 ## :seedling: Motivation
 
