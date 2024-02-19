@@ -24,11 +24,17 @@ This is my Module 1 Get Coding project and helped me in learning to code.
 - HTML
 - CSS
 - JavaScript
+- Canva Magic Media text to Image
 
-## 
 
+## Acknowledgements
+Thank you so much to my coach, Gillian Ogyiri, for her excellent guidance and support throughout the project.
+
+## Try It Here
+https://casslee1.github.io/PickATrail/
+Use the following login:
+Username: userID, 
+Password: userPassword
 
 ![image](https://github.com/casslee1/PickATrail/assets/84476607/cade5b34-ae8b-4414-a93e-875e52d95988)
-
-
 
