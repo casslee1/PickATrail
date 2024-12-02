@@ -38,3 +38,6 @@ Password: userPassword
 
 ![image](https://github.com/casslee1/PickATrail/assets/84476607/cade5b34-ae8b-4414-a93e-875e52d95988)
 
+### Update - Map Out of Order
+This site was built with a free trial of the Google Maps API. It does not have the capacity to securely store a paid API key now that the free trial has expired. I plan on updating this project after my current projects are wrapped up but there is no set date. Last updated December 1, 2024.
+
